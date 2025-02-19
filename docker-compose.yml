@@ -8,12 +8,12 @@ services:
       - JWT_SECRET=secret
     depends_on:
       - rabbitmq
-      - user-service
+      - employee-service
       - task-service
       - analytics-service
 
-  user-service:
-    build: ./user-service
+  employee-service:
+    build: ./employee-service
     environment:
       - RABBITMQ_URL=amqp://rabbitmq
     ports:

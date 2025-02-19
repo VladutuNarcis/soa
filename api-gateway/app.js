@@ -37,21 +37,21 @@ app.post('/login', (req, res) => {
 
 app.post('/register', async (req, res) => {
   try {
-    const response = await axios.post('http://user-service:4000/register', req.body);
+    const response = await axios.post('http://employee-service:4000/register', req.body);
     res.json(response.data);
   } catch (err) {
     console.error(err);
-    res.status(500).send('Error calling user-service register');
+    res.status(500).send('Error calling employee-service register');
   }
 });
 
 app.get('/api/user', async (req, res) => {
   try {
-    const response = await axios.get('http://user-service:4000/user');
+    const response = await axios.get('http://employee-service:4000/user');
     res.json(response.data);
   } catch (err) {
     console.error(err);
-    res.status(500).send('Error calling user-service');
+    res.status(500).send('Error calling employee-service');
   }
 });
 

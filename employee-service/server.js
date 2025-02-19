@@ -33,7 +33,7 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/user', (req, res) => {
-  res.json({ id: 1, name: 'Admin User from User-Service' });
+  res.json({ id: 1, name: 'Admin User from' });
 });
 
 app.listen(4000, () => {
